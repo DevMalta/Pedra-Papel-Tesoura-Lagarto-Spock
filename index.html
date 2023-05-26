@@ -1,12 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jokenpo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    
+    <h1>Pedra, Papel e Tesoura</h1>
+    <section class="game">
+        <Button id="pedra">
+            <i class="fas fa-hand-rock icon"></i>
+        </Button>
+        <Button id="papel">
+            <i class="fas fa-hand-paper icon"></i>
+        </Button>
+        <Button id="tesoura">
+            <i class="fas fa-hand-scissors icon"></i>
+        </Button>
+    </section>
+    <section class="resultado">
+        <p id="resultado-texto">
+            Escolha uma opção para começar !
+        </p>
+    </section>
+    <section id="tabela-historico">
+        <thead>
+            <tr>
+                <th>Partida</th>
+                <th>Jogador</th>
+                <th>Computador</th>
+                <th>Resultado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Linhas gerdadas dinâmicamente -->
+        </tbody>
+    </section>
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
