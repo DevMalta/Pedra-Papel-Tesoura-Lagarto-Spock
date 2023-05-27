@@ -12,13 +12,13 @@
     <h1>Pedra, Papel e Tesoura</h1>
     <section class="game">
         <Button id="pedra">
-            <i class="fas fa-hand-rock icon"></i>
+            <i class="fas fa-hand-rock"></i>
         </Button>
         <Button id="papel">
-            <i class="fas fa-hand-paper icon"></i>
+            <i class="fas fa-hand-paper"></i>
         </Button>
         <Button id="tesoura">
-            <i class="fas fa-hand-scissors icon"></i>
+            <i class="fas fa-hand-scissors"></i>
         </Button>
     </section>
     <section class="resultado">
@@ -26,18 +26,22 @@
             Escolha uma opção para começar !
         </p>
     </section>
-    <section id="tabela-historico">
-        <thead>
-            <tr>
-                <th>Partida</th>
-                <th>Jogador</th>
-                <th>Computador</th>
-                <th>Resultado</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Linhas gerdadas dinâmicamente -->
-        </tbody>
+    <section class="historico">
+        <h2>Histórico de Jogos</h2>
+        <table id="tabela-historico">
+            <thead>
+                <tr>
+                    <th>Partida</th>
+                    <th>Jogador</th>
+                    <th>Computador</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Linhas gerdadas dinâmicamente -->
+            </tbody>
+            <p>Porcentagem de acertos: <span id="porcentagem-acertos"0%></span></p>
+        </table>
     </section>
 
 
