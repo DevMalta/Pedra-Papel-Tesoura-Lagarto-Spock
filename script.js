@@ -1,6 +1,9 @@
 const pedra = document.getElementById("pedra");
 const papel = document.getElementById("papel");
 const tesoura = document.getElementById("tesoura");
+const lagarto = document.getElementById("lagarto");
+const spock = document.getElementById("spock");
+
 const resultadoTexto = document.getElementById("resultado-texto");
 const tabelaHistorico = document.getElementById("tabela-historico")
 const porcentagemAcertos = document.getElementById("porcentagem-acertos");
@@ -11,6 +14,8 @@ let vitorias = 0;
 pedra.addEventListener("click", () => jogar("pedra"));
 papel.addEventListener("click", () => jogar("papel"));
 tesoura.addEventListener("click", () => jogar("tesoura"));
+lagarto.addEventListener("click", () => jogar("lagarto"));
+spock.addEventListener("click", () => jogar("spock"));
 
 function jogar(escolhaJogador) {
     const escolhaComputador = jogadaComputador();
@@ -43,6 +48,8 @@ function jogadaComputador(){
         "pedra", 
         "papel", 
         "tesoura",
+        "lagarto",
+        "spock",
     ]
     const indice = Math.floor(
         Math.random() * opcoes.length
@@ -56,8 +63,15 @@ function resultado(jogador, computador){
     }
     if(
         (jogador === "pedra" && computador === "tesoura") ||
+        (jogador === "pedra" && computador === "lagarto") ||
         (jogador === "tesoura" && computador === "papel") ||
-        (jogador === "papel" && computador === "pedra")
+        (jogador === "tesoura" && computador === "lagarto") ||
+        (jogador === "papel" && computador === "spock") ||
+        (jogador === "papel" && computador === "pedra") ||
+        (jogador === "lagarto" && computador === "spock") ||
+        (jogador === "lagarto" && computador === "papel") ||
+        (jogador === "spock" && computador === "tesoura") ||
+        (jogador === "spock" && computador === "pedra")
     ){
         return "vitoria"
     }

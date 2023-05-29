@@ -7,9 +7,56 @@
     <title>Jokenpo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></head>
 <body>
-    <h1>Pedra, Papel e Tesoura</h1>
+    <h1>Pedra-Papel-Tesoura-Lagarto-Spock</h1>
+    <section class="montando-modal">
+        <!-- Botão para acionar modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+            Abrir Regras
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Regras do Jogo</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                   - Tesoura corta papel</br>
+                   - Papel cobre pedra</br>
+                   - Pedra esmaga lagarto</br>
+                   - Lagarto envenena Spock</br>
+                   - Spock esmaga (ou derrete) tesoura</br>
+                   - Tesoura decapita lagarto</br>
+                   - Lagarto come papel</br>
+                   - Papel refuta Spock</br>
+                   - Spock vaporiza pedra</br>
+                   - Pedra amassa tesoura</br>
+                </br>
+                   # Veja a um video explicativo: #
+                   <iframe 
+                   width="560" 
+                   height="315" 
+                   src="https://www.youtube.com/embed/abQj0pQkSOY" 
+                   title="YouTube video player" 
+                   frameborder="0" 
+                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                   allowfullscreen>
+                </iframe>
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <!-- <button type="button" class="btn btn-primary">Salvar mudanças</button> -->
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
     <section class="game">
         <Button id="pedra">
             <i class="fas fa-hand-rock"></i>
@@ -19,6 +66,12 @@
         </Button>
         <Button id="tesoura">
             <i class="fas fa-hand-scissors"></i>
+        </Button>
+        <Button id="lagarto">
+            <i class="fa-solid fa-hand-lizard"></i>
+        </Button>
+        <Button id="spock">
+            <i class="fa-solid fa-hand-spock"></i>
         </Button>
     </section>
     <section class="resultado">
@@ -43,11 +96,9 @@
             <p>Porcentagem de acertos: <span id="porcentagem-acertos"0%></span></p>
         </table>
     </section>
-
-
-
-
-    <script src="script.js"></script>
-    <!-- <script src="comparation.js"></script> -->
+                    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+                    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+                    <script src="script.js"></script>
 </body>
 </html>
